@@ -1,0 +1,8 @@
+{
+  "host-rules": [
+    {
+      "host": "api.myanimelist.net",
+      "allowed_headers": ["*"]
+    }
+  ]
+}

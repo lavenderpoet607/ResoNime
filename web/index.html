@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="$FLUTTER_BASE_HREF">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="ResoNime">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="resonime">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+    <title>ResoNime</title>
+    <link rel="manifest" href="manifest.json">
+
+    <script>
+        (function() {
+            const originalFetch = window.fetch;
+            window.fetch = function(resource, options) {
+                if (typeof resource === 'string' && resource.includes('api.myanimelist.net')) {
+                    return new Promise((resolve, reject) => {
+                        const xhr = new XMLHttpRequest();
+                        xhr.open('GET', resource, true);
+                        xhr.setRequestHeader('X-MAL-CLIENT-ID', '010fae8edeee91d328ba0cafff3da6ee');
+                        
+                        xhr.onload = function() {
+                            if (xhr.status === 200) {
+                                const blob = new Blob([xhr.response], {type: 'application/json'});
+                                resolve(new Response(blob, {
+                                    status: 200,
+                                    statusText: 'OK'
+                                }));
+                            } else {
+                                reject(new Error(`HTTP ${xhr.status}`));
+                            }
+                        };
+                        
+                        xhr.onerror = function() {
+                            reject(new Error('Network error'));
+                        };
+                        
+                        xhr.send();
+                    });
+                }
+                return originalFetch(resource, options);
+            };
+        })();
+    </script>
+</head>
+<body>
+    <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
