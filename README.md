@@ -2,8 +2,6 @@
 
 <div align="center">
 
-![ResoNime Banner](https://via.placeholder.com/800x200/6366f1/ffffff?text=ResoNime+Anime+Streaming)
-
 ### 🎬 Aplikasi Streaming Anime Gratis & Terlengkap
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.0+-02569B?style=for-the-badge&logo=flutter)](https://flutter.dev)
@@ -34,16 +32,6 @@
 - **Riwayat Nonton** - Lanjutkan dari episode terakhir
 - **Dark Mode** - Tema gelap untuk kenyamanan mata
 - **User-Friendly** - Interface intuitif dan mudah digunakan
-
-## 📸 Preview Aplikasi
-
-<div align="center">
-
-| Home Page | Detail Anime | Video Player | Profile |
-|-----------|--------------|--------------|---------|
-| <img src="https://via.placeholder.com/200x400/4A5568/FFFFFF?text=Home+Screen" width="200"> | <img src="https://via.placeholder.com/200x400/2D3748/FFFFFF?text=Detail+Anime" width="200"> | <img src="https://via.placeholder.com/200x400/1A202C/FFFFFF?text=Video+Player" width="200"> | <img src="https://via.placeholder.com/200x400/4A5568/FFFFFF?text=User+Profile" width="200"> |
-
-</div>
 
 ## 🚀 Memulai
 
